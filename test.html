@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 2;
+            border-bottom: 1px solid #000;
+        }
+        
+        .separator:not(:empty)::before {
+            margin-right: 15px;
+        }
+        
+        .separator:not(:empty)::after {
+            margin-left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+
+</html>

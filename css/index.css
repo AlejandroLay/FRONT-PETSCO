@@ -18,6 +18,198 @@
 }
 
 
+/* ################################### ESTILOS DE MODAL ################################### */
+
+#login {
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);
+    transition: all .4s;
+}
+
+#login:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-login__content {
+    border-radius: 4px;
+    position: relative;
+    width: 400px;
+    height: 550px;
+    background: #ffffff;
+    padding: 1em 2em;
+}
+
+.btn-modal-login {
+    background-color: #fff;
+}
+
+.modal-login__close {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+}
+
+
+/* ################################### BOTONES SELECION DE REGISTRAR O INICIAR SESION ################################### */
+
+.selector-modal {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selector-modal button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: normal;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.selector-modal button:hover {
+    text-decoration: underline;
+    color: #7A4C00;
+    border-bottom: 7px solid #7A4C00;
+}
+
+.selector-modal button.selected {
+    text-decoration: underline;
+    border-bottom: 7px solid #7A4C00;
+}
+
+
+/* ################################### INPUTS Y TEXTO REGISTRAR O INICIAR SESION ################################### */
+
+#registrar-container,
+#iniciar-container {
+    display: none;
+    margin-top: 30px;
+}
+
+#registrar-container h1,
+#iniciar-container h1 {
+    font-size: 15px;
+}
+
+#iniciar-container input,
+#registrar-container input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.inputs-modal {
+    margin-top: 20px;
+}
+
+.inputs-modal label {
+    font-size: 15px;
+}
+
+.inputs-modal input {
+    width: 96.5%;
+    margin-top: 5px;
+    font-size: 15px;
+    height: 22.5px;
+    padding: 5px 0px 5px 10px;
+}
+
+.inputs-modal input:focus {
+    outline: none;
+}
+
+.btn-iniciarsesion-registarse {
+    margin-top: 25px;
+}
+
+.btn-iniciarsesion-registarse button {
+    background-color: var(--color-5);
+    border: solid 1px black;
+    color: white;
+    width: 100%;
+    font-size: 15px;
+    padding: 5px 0px;
+    cursor: pointer;
+}
+
+.btn-redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn-redes i {
+    margin-right: 10px;
+}
+
+.btn-google {
+    background-color: #e04c34;
+    border: 2px solid #e04c34;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    width: 40%;
+    margin: 5px;
+    padding: 5px 0px;
+}
+
+.btn-facebook {
+    background-color: #506494;
+    border: 2px solid #506494;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    width: 40%;
+    margin: 5px;
+    padding: 5px 0px;
+}
+
+
+/* ################################### HR CON TEXTO EN EL MEDIO ################################### */
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 2;
+    border-bottom: 1px solid #000;
+}
+
+.separator:not(:empty)::before {
+    margin-right: 15px;
+}
+
+.separator:not(:empty)::after {
+    margin-left: 15px;
+}
+
+
 /* ################################### NAVBAR ################################### */
 
 nav {
@@ -56,6 +248,14 @@ nav {
     text-decoration: none;
     font-size: 18px;
     color: black;
+}
+
+.btn-login {
+    background-color: white;
+    border: solid 1px white;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 
@@ -206,4 +406,14 @@ nav {
 .four-marcas img {
     margin: 15px;
     width: 150px;
+}
+
+
+/* ################################### RESPONSIVE MODE ################################### */
+
+@media only screen and (max-width: 600px) {
+    .modal-login__content {
+        width: 100%;
+        height: 100%;
+    }
 }
