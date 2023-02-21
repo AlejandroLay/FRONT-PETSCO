@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets&Co</title>
+    <link rel="stylesheet" href="./css/cesta.css">
+    <script src="https://kit.fontawesome.com/2b5286e1aa.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="padding-page">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./img/logo.jpg" alt="Logo">
+            </a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Busca tus marcas y productos favoritos...">
+        </div>
+        <div class="buttons">
+            <!-- BOTON YA INICIADO -->
+            <button class="log-out" onmouseover="cambiarTexto(this)" onmouseout="restaurarTexto(this)">
+                <span class="original-text">Hola, Alejandro</span>
+            </button>
+            <!-- BOTON NO INICIADO -->
+            <!-- <a href="#login"><button id="overflox-modal" class="btn-login">Iniciar Sesión</button></a> -->
+            <a href="cesta.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </nav>
+    <!-- MENU -->
+    <div class="menu padding-page">
+        <a href="">
+            <p>Perros</p>
+        </a>
+        <a href="">
+            <p>Gatos</p>
+        </a>
+        <a href="">
+            <p>Conejos y roedores</p>
+        </a>
+        <a href="">
+            <p>Peces</p>
+        </a>
+        <a href="">
+            <p>Reptiles</p>
+        </a>
+        <a href="">
+            <p>Pajaros</p>
+        </a>
+    </div>
+    <script src="./js/log-out.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

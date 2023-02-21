@@ -17,10 +17,6 @@
     margin-right: 5%;
 }
 
-.overflox-modal {
-    overflow: hidden;
-}
-
 
 /* ################################### ESTILOS DE MODAL ################################### */
 
@@ -150,6 +146,7 @@
     color: white;
     width: 100%;
     font-size: 15px;
+    border-radius: 4px;
     padding: 5px 0px;
     cursor: pointer;
 }
