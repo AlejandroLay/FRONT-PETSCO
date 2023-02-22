@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap');
 * {
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
@@ -20,8 +20,8 @@ body {
 }
 
 .padding-page {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 9%;
+    margin-right: 9%;
 }
 
 
@@ -51,8 +51,8 @@ body {
 .modal-login__content {
     border-radius: 4px;
     position: relative;
-    width: 400px;
-    height: 560px;
+    width: 500px;
+    height: 660px;
     background: #ffffff;
     padding: 1em 2em;
 }
@@ -109,7 +109,7 @@ body {
 #registrar-container,
 #iniciar-container {
     display: none;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 #registrar-container h1,
@@ -136,7 +136,7 @@ body {
     margin-top: 5px;
     font-size: 15px;
     height: 22.5px;
-    padding: 15px 0px 15px 8px;
+    padding: 18px 0px 18px 8px;
 }
 
 .inputs-modal input:focus {
@@ -424,28 +424,49 @@ nav {
 
 /* ################################### CESTA ################################### */
 
+.mesaje-envio {
+    text-align: center;
+    font-size: 14px;
+    background-color: var(--color-6);
+    padding: 0.1px 0px;
+}
+
+
+/* ################################### CESTA ################################### */
+
+.texto-mi-cesta {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
 .container-cesta {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .left-column-cesta {
-    width: 75%;
+    width: 70%;
 }
 
 .right-column-cesta {
-    width: 25%;
+    width: 30%;
 }
+
+
+/* ESTILOS PARA BOXES */
 
 .box-cesta {
     border: 1px solid black;
     border-radius: 3px;
     margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .box-cesta-texto {
-    padding-left: 5px;
-    margin: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 15px;
 }
 
 .box-cesta-texto h1 {
@@ -463,8 +484,8 @@ nav {
 .box-cesta-contenido-imagen-producto {
     display: flex;
     float: left;
-    width: 20%;
-    height: 25vh;
+    width: 15%;
+    height: 15vh;
     justify-content: center;
     align-items: center;
 }
@@ -475,7 +496,7 @@ nav {
 
 .box-cesta-contenido-informacion-producto {
     float: left;
-    width: 25%;
+    width: 20%;
 }
 
 .box-cesta-contenido-informacion-producto p {
@@ -483,20 +504,95 @@ nav {
     margin: 0;
 }
 
+.box-cesta-contenido-descripcion-producto {
+    float: left;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .box-cesta-contenido-precio {
     float: left;
-    width: 30%;
+    width: 20%;
+}
+
+.box-cesta-contenido-precio p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.box-cesta-contenido-precio h1 {
+    font-size: 16px;
+    text-align: center;
 }
 
 .box-cesta-contenido-eliminar {
     float: left;
-    width: 25%;
+    width: 10%;
+    display: flex;
+    text-align: center;
+}
+
+.box-cesta-contenido-eliminar button {
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* ESTILO PARA BOX TOTAL PEDIDO */
+
+.box-total-pedido {
+    margin-top: 60px;
+    margin-left: 25px;
+    border: 1px solid #E0E0E0;
+    border-radius: 3px;
+    padding: 0px 15px;
+}
+
+.box-total-pedido h1 {
+    font-size: 20px;
+}
+
+.two-columns-total-pedido {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.two-columns-total-pedido-texto {
+    width: 80%;
+    margin: 0;
+}
+
+.two-columns-total-pedido-precio {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-total-pedido button {
+    width: 100%;
+    padding: 15px 0px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    background-color: var(--color-1);
+    color: white;
+    border: 1px solid var(--color-1);
+    font-size: 15px;
 }
 
 
 /* ################################### RESPONSIVE MODE ################################### */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
+    .padding-page {
+        margin: 10px;
+    }
     .modal-login__content {
         width: 100%;
         height: 100%;
@@ -507,6 +603,9 @@ nav {
     }
     .box-cesta-contenido-informacion-producto {
         width: 50%;
+    }
+    .box-cesta-contenido-descripcion-producto {
+        width: 100%;
     }
     .box-cesta-contenido-precio {
         width: 50%;
@@ -519,5 +618,8 @@ nav {
     }
     .left-column-cesta {
         width: 100%;
+    }
+    .box-total-pedido {
+        margin-left: 0px;
     }
 }
