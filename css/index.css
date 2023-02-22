@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 * {
     font-family: 'Open Sans', sans-serif;
-    margin-top: 5px;
-    margin-right: 0;
-    margin-left: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 15px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 :root {
@@ -105,7 +109,7 @@
 #registrar-container,
 #iniciar-container {
     display: none;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 #registrar-container h1,
@@ -128,11 +132,11 @@
 }
 
 .inputs-modal input {
-    width: 96.5%;
+    width: 100%;
     margin-top: 5px;
     font-size: 15px;
     height: 22.5px;
-    padding: 5px 0px 5px 10px;
+    padding: 15px 0px 15px 8px;
 }
 
 .inputs-modal input:focus {
@@ -175,7 +179,7 @@
     cursor: pointer;
     font-size: 15px;
     width: 40%;
-    margin: 5px;
+    margin-top: 2px;
     padding: 5px 0px;
 }
 
@@ -271,8 +275,8 @@ nav {
     left: 65%;
     background: var(--color-4);
     font-size: 12px;
-    width: 13px;
-    height: 13px;
+    width: 17px;
+    height: 17px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -307,6 +311,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .menu p {
@@ -348,12 +353,12 @@ nav {
     margin-top: 10px;
     font-size: 13px;
     color: var(--color-1);
-    /* font-weight: bold; */
     text-transform: uppercase;
+    margin-bottom: 0;
 }
 
 .card-desc {
-    margin-top: 3px;
+    margin-top: 10px;
 }
 
 .card-precio {
@@ -417,18 +422,75 @@ nav {
 }
 
 
-/* ################################### FOUR MARCAS ################################### */
+/* ################################### CESTA ################################### */
 
-.four-marcas {
+.container-cesta {
     display: flex;
-    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.left-column-cesta {
+    width: 75%;
+}
+
+.right-column-cesta {
+    width: 25%;
+}
+
+.box-cesta {
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.box-cesta-texto {
+    padding-left: 5px;
+    margin: 0px;
+}
+
+.box-cesta-texto h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.box-cesta-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+}
+
+.box-cesta-contenido-imagen-producto {
+    display: flex;
+    float: left;
+    width: 20%;
+    height: 25vh;
     justify-content: center;
     align-items: center;
 }
 
-.four-marcas img {
-    margin: 15px;
-    width: 150px;
+.box-cesta-contenido-imagen-producto img {
+    max-height: 100%;
+}
+
+.box-cesta-contenido-informacion-producto {
+    float: left;
+    width: 25%;
+}
+
+.box-cesta-contenido-informacion-producto p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.box-cesta-contenido-precio {
+    float: left;
+    width: 30%;
+}
+
+.box-cesta-contenido-eliminar {
+    float: left;
+    width: 25%;
 }
 
 
@@ -439,5 +501,23 @@ nav {
         width: 100%;
         height: 100%;
         margin-top: 25px;
+    }
+    .box-cesta-contenido-imagen-producto {
+        width: 50%;
+    }
+    .box-cesta-contenido-informacion-producto {
+        width: 50%;
+    }
+    .box-cesta-contenido-precio {
+        width: 50%;
+    }
+    .box-cesta-contenido-eliminar {
+        width: 50%;
+    }
+    .right-column-cesta {
+        width: 100%;
+    }
+    .left-column-cesta {
+        width: 100%;
     }
 }
