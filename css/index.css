@@ -247,19 +247,64 @@ nav {
     border-radius: 5px;
 }
 
-.buttons a {
-    margin-left: 20px;
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
-}
-
 .btn-login {
     background-color: white;
     border: solid 1px white;
     border-radius: 20px;
     font-size: 18px;
     cursor: pointer;
+}
+
+.btn-cesta {
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+
+
+/* ################################### DROPDOWN ################################### */
+
+.dropdown {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+}
+
+.dropdown_hover {
+    display: inline-block;
+    padding: 10px;
+    background-color: white;
+    border: 0 solid white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.dropdown_menu {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+}
+
+.dropdown:hover .dropdown_menu {
+    display: block;
+}
+
+.dropdown_menu i {
+    margin-right: 5px;
+}
+
+.dropdown_menu a {
+    text-align: center;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-size: 14px;
 }
 
 
@@ -334,48 +379,39 @@ nav {
 /* ################################### CARD ################################### */
 
 .four-columns {
-    margin-top: 30px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .card {
     width: 20%;
-    margin: 20px;
+    padding: 8px;
+    margin-top: 30px;
 }
 
 .card-image img {
     width: 100%;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 .card-marca {
-    margin-top: 10px;
     font-size: 13px;
     color: var(--color-1);
     text-transform: uppercase;
-    margin-bottom: 0;
-}
-
-.card-desc {
-    margin-top: 10px;
 }
 
 .card-precio {
-    margin-top: 15px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .card-boton {
-    margin-top: 13px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
 }
 
 .card-boton button {
-    width: 100%;
+    width: 95%;
     background-color: var(--color-4);
     border: 1px solid black;
     color: white;
@@ -589,6 +625,9 @@ nav {
 
 /* ################################### RESPONSIVE MODE ################################### */
 
+
+/* FOUR-COLUMN DESIGN */
+
 @media only screen and (max-width: 1000px) {
     .padding-page {
         margin: 10px;
@@ -621,5 +660,38 @@ nav {
     }
     .box-total-pedido {
         margin-left: 0px;
+    }
+    .card {
+        width: 25%;
+    }
+}
+
+
+/* THREE-COLUMN DESIGN */
+
+@media only screen and (max-width: 790px) {
+    .card {
+        width: 33.33%;
+    }
+}
+
+
+/* TWO-COLUMN DESIGN */
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 50%;
+    }
+}
+
+
+/* ONE-COLUMN DESIGN */
+
+@media only screen and (max-width: 425px) {
+    .card {
+        width: 100%;
+    }
+    .card-boton button {
+        width: 100%;
     }
 }
