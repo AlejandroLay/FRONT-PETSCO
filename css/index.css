@@ -8,6 +8,7 @@ body {
     margin-top: 15px;
     margin-right: 0px;
     margin-left: 0px;
+    margin: 0;
 }
 
 :root {
@@ -22,6 +23,25 @@ body {
 .padding-page {
     margin-left: 9%;
     margin-right: 9%;
+}
+
+
+/* ################################### FOOTER ################################### */
+
+footer {
+    margin: 0;
+    text-align: center;
+    background-color: rgb(235, 235, 235);
+    padding: 30px;
+}
+
+footer img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 14px;
 }
 
 
@@ -220,7 +240,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 5px;
+    margin-top: 15px;
 }
 
 .logo img {
@@ -356,7 +376,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .menu p {
@@ -632,11 +652,6 @@ nav {
     .padding-page {
         margin: 10px;
     }
-    .modal-login__content {
-        width: 100%;
-        height: 100%;
-        margin-top: 25px;
-    }
     .box-cesta-contenido-imagen-producto {
         width: 50%;
     }
@@ -681,6 +696,12 @@ nav {
 @media only screen and (max-width: 600px) {
     .card {
         width: 50%;
+    }
+    .modal-login__content {
+        width: 100%;
+        height: 100%;
+        margin-top: 25px;
+        margin: 0;
     }
 }
 
