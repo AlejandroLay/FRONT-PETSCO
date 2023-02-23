@@ -11,6 +11,10 @@ body {
     margin: 0;
 }
 
+.bloquear-scroll {
+    overflow: hidden;
+}
+
 :root {
     --color-1: #7A4C00;
     --color-2: #F9B64B;
@@ -28,20 +32,64 @@ body {
 
 /* ################################### FOOTER ################################### */
 
-footer {
-    margin: 0;
-    text-align: center;
+.footer {
+    margin: 3em 0 0;
+    padding: 8vh 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(235, 235, 235);
-    padding: 30px;
 }
 
-footer img {
+.footer ul {
+    list-style-type: none;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer__center {
+    width: 80%;
+    max-width: 55em;
+}
+
+.footer__fila {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.footer__fila img {
     width: 200px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
-footer p {
-    font-size: 14px;
+.footer__p {
+    margin: 0 0 1.5em;
+    font-size: 1em;
+}
+
+.footer__ul {
+    margin: 0 0 2em;
+    font-size: 0.8em;
+}
+
+.footer__li {
+    margin: 0 0 1.4em;
+}
+
+.footer__select {
+    max-width: 150px;
+    margin: 0 0 1em;
+}
+
+.footer .brand {
+    margin: 2.8em 0 0;
+    font-size: 0.8em;
 }
 
 
@@ -376,7 +424,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .menu p {
@@ -455,25 +504,25 @@ nav {
     margin-top: 25px;
 }
 
-.text {
+.two-column-text {
     width: 50%;
 }
 
-.text h2 {
+.two-column-text h2 {
     font-size: 50px;
     font-weight: bold;
 }
 
-.text p {
+.two-column-text p {
     font-size: 20px;
 }
 
-.image {
+.two-column-image {
     width: 50%;
     padding: 50px;
 }
 
-.image img {
+.two-column-image img {
     max-width: 100%;
 }
 
@@ -687,6 +736,9 @@ nav {
 @media only screen and (max-width: 790px) {
     .card {
         width: 33.33%;
+    }
+    .footer__ul {
+        width: calc( 100% / 2);
     }
 }
 
