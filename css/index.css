@@ -22,6 +22,7 @@ body {
     --color-4: #785824;
     --color-5: #C47900;
     --color-6: #F1CBC0;
+    --color-background: rgb(235, 235, 235);
 }
 
 .padding-page {
@@ -494,40 +495,35 @@ nav {
 }
 
 
-/* ################################### MENSAJE CON TEXTO ################################### */
+/* ################################### SLOGAN ################################### */
 
-.two-column {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 25px;
+.slogan {
+    text-align: center;
+    margin-top: 70px;
 }
 
-.two-column-text {
+.two-column-slogan {
+    margin: 0 auto;
+    max-width: 960px;
+    overflow: hidden;
+}
+
+.two-column-slogan-image {
     width: 50%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.two-column-text h2 {
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.two-column-text p {
-    font-size: 20px;
-}
-
-.two-column-image {
-    width: 50%;
-    padding: 50px;
-}
-
-.two-column-image img {
-    max-width: 100%;
+.two-column-slogan-image img {
+    width: 100%;
 }
 
 
 /* ################################### CESTA ################################### */
+
+
+/* MENSAJE ENVIO GRATIS */
 
 .mesaje-envio {
     text-align: center;
@@ -537,7 +533,7 @@ nav {
 }
 
 
-/* ################################### CESTA ################################### */
+/* DISEÑO BLOQUES CESTA */
 
 .texto-mi-cesta {
     font-size: 20px;
@@ -692,6 +688,22 @@ nav {
 }
 
 
+/* ################################### ESTILOS PARA CRUD ################################### */
+
+.tabla-crud {
+    margin-top: 50px;
+    overflow-x: auto;
+}
+
+.tabla-crud table {
+    text-align: left;
+    width: 100%;
+    padding: 20px 50px;
+    border: 1px solid #b9b9b9;
+    border-radius: 5px;
+}
+
+
 /* ################################### RESPONSIVE MODE ################################### */
 
 
@@ -754,6 +766,9 @@ nav {
         height: 100%;
         margin-top: 25px;
         margin: 0;
+    }
+    .two-column-slogan-image {
+        width: 100%;
     }
 }
 

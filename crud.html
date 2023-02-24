@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets&Co</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://kit.fontawesome.com/2b5286e1aa.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="padding-page">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./img/logo.png" alt="Logo">
+            </a>
+        </div>
+        <!-- MENU -->
+        <!-- <div class="menu">
+            <a href="">
+                <p>Perros</p>
+            </a>
+            <a href="">
+                <p>Gatos</p>
+            </a>
+            <a href="">
+                <p>Conejos y roedores</p>
+            </a>
+            <a href="">
+                <p>Peces</p>
+            </a>
+            <a href="">
+                <p>Reptiles</p>
+            </a>
+            <a href="">
+                <p>Pajaros</p>
+            </a>
+        </div> -->
+        <div class="buttons">
+            <!-- BOTON NO INICIADO -->
+            <!-- <button class="btn-login">Iniciar Sesión</button> -->
+            <!-- BOTON YA INICIADO -->
+            <div class="dropdown">
+                <button class="dropdown_hover">Hola, Alejandro</button>
+                <div class="dropdown_menu">
+                    <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+                </div>
+            </div>
+            <!-- <a href="cesta.html" class="cart btn-cesta"><i class="fas fa-shopping-cart"></i>
+                <span id="cart_menu_num">5</span>
+            </a> -->
+        </div>
+    </nav>
+    <div class="tabla-crud padding-page">
+        <table style="text-align: center; width:100%;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Username</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="resultado"></tbody>
+        </table>
+    </div>
+</body>
+
+</html>
