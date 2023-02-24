@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets&Co</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://kit.fontawesome.com/2b5286e1aa.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#7a4c00">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="padding-page">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./img/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="search">
+            <input type="search" id="search-input" placeholder="Busca tus marcas y productos favoritos...">
+        </div>
+        <div class="buttons">
+            <!-- BOTON NO INICIADO -->
+            <a href="#login"><button id="deshabilitar-id" class="btn-login">Iniciar Sesión</button></a>
+            <!-- BOTON YA INICIADO -->
+            <!-- <div class="dropdown">
+                <button class="dropdown_hover">Hola, Alejandro</button>
+                <div class="dropdown_menu">
+                    <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+                </div>
+            </div> -->
+            <a href="cesta.html" class="cart btn-cesta"><i class="fas fa-shopping-cart"></i>
+                <span id="cart_menu_num">5</span>
+            </a>
+        </div>
+    </nav>
+    <!-- MENU -->
+    <div class="menu padding-page">
+        <a href="">
+            <p>Perros</p>
+        </a>
+        <a href="">
+            <p>Gatos</p>
+        </a>
+        <a href="">
+            <p>Conejos y roedores</p>
+        </a>
+        <a href="">
+            <p>Peces</p>
+        </a>
+        <a href="">
+            <p>Reptiles</p>
+        </a>
+        <a href="">
+            <p>Pajaros</p>
+        </a>
+    </div>
+    <div class="two-column-vista-productos padding-page">
+        <div class="box-imagen-producto">
+            <img src="./img/comida/comida3.jpg" alt="">
+        </div>
+        <div class="box-descripcion-productos">
+            <div class="box-descripcion-informacion-producto">
+                <h1 class="box-descripcion-productos-marca">Nath</h1>
+                <h1 class="box-descripcion-productos-titulo">Nath Adult Medium Pollo pienso para perros</h1>
+                <p>Pienso gastrointestinal para perros adultos de tamaño mediano y grande con gastritis, diarrea, gastroenteritis o molestias digestivas. </p>
+            </div>
+            <hr>
+            <div class="box-descripcion-informacion-precio">
+                <h1 class="box-descripcion-precio">12.35€</h1>
+                <p class="texto-en-stock">En stock</p>
+            </div>
+            <button class="boton-añadir-a-la-cesta-productos"><i class="fa-solid fa-basket-shopping"></i> Añadir a la cesta</button>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__center">
+            <div class="footer__fila">
+                <img src="./img/logo-sin-fondo.png" alt="">
+            </div>
+            <div class="footer__fila">
+                <ul class="footer__ul">
+                    <li class="footer__li"><a href="https://help.netflix.com/es-es/node/412" class="footer__a">Preguntas frecuentes</a></li>
+                    <li class="footer__li"><a href="https://ir.netflix.net/ir-overview/profile/default.aspx" class="footer__a">Inversores</a></li>
+                    <li class="footer__li"><a href="https://devices.netflix.com/es/" class="footer__a">Formas de ver</a></li>
+                    <li class="footer__li"><a href="https://help.netflix.com/legal/corpinfo" class="footer__a">Información corporativa</a></li>
+                    <li class="footer__li"><a href="https://help.netflix.com/legal/notices" class="footer__a">Avisos legales</a></li>
+                </ul>
+                <ul class="footer__ul">
+                    <li class="footer__li"><a href="https://help.netflix.com/es-es/" class="footer__a">Centro de ayuda</a></li>
+                    <li class="footer__li"><a href="https://jobs.netflix.com/" class="footer__a">Empleo</a></li>
+                    <li class="footer__li"><a href="https://help.netflix.com/legal/termsofuse" class="footer__a">Términos de uso</a></li>
+                    <li class="footer__li"><a href="https://help.netflix.com/es-es/contactus" class="footer__a">Contáctanos</a></li>
+                    <li class="footer__li"><a href="https://www.netflix.com/es/browse/genre/839338" class="footer__a">Solo en Netflix</a></li>
+                </ul>
+                <ul class="footer__ul">
+                    <li class="footer__li"><a href="{{url('/login')}}" class="footer__a">Cuenta</a></li>
+                    <li class="footer__li"><a href="https://www.netflix.com/es/redeem" class="footer__a">Canjear tarjetas regalo</a></li>
+                    <li class="footer__li"><a href="https://help.netflix.com/legal/privacy" class="footer__a">Privacidad</a></li>
+                    <li class="footer__li"><a href="https://fast.com/es/" class="footer__a">Prueba de velocidad</a></li>
+                </ul>
+                <ul class="footer__ul">
+                    <li class="footer__li"><a href="https://media.netflix.com/es/" class="footer__a">Zona de prensa</a></li>
+                    <li class="footer__li"><a href="https://www.netflix.com/gift-cards" class="footer__a">Comprar tarjetas regalo</a></li>
+                    <li class="footer__li"><a href="https://www.netflix.com/es/" class="footer__a">Preferencias de cookies</a></li>
+                    <li class="footer__li"><a href="https://help.netflix.com/es-es/node/125888" class="footer__a">Garantía legal</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/search.js"></script>
+</body>
+
+</html>
