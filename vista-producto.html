@@ -20,33 +20,78 @@
 </head>
 
 <body>
+    <!-- MODA -->
+    <div id="login" class="modal-login">
+        <div class="modal-login__content">
+            <div class="selector-modal">
+                <button id="registrar">Registrate</button>
+                <button id="iniciar">Inicia Sesión</button>
+            </div>
+            <div id="registrar-container">
+                <h1>¡Únete a la gran familia de Pets&Co!</h1>
+                <div class="inputs-modal">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="password-input-1" required>
+                    <label for="uname">Correo</label>
+                    <input type="email" id="password-input-1" required>
+                    <label for="psw">Contraseña</label>
+                    <input type="password" id="password-input-2" required>
+                </div>
+                <div class="btn-iniciarsesion-registarse">
+                    <button>Crear Cuenta</button>
+                </div>
+                <div class="separator">O bien registrate con</div>
+                <div class="btn-redes">
+                    <button class="btn-google"><i class="fa-brands fa-google"></i>Google</button>
+                </div>
+            </div>
+
+            <div id="iniciar-container">
+                <h1>Hola, ¡ya te echábamos de menos!</h1>
+                <div class="inputs-modal">
+                    <label for="uname">Correo</label>
+                    <input type="email" id="password-input-1" required>
+                    <label for="psw">Contraseña</label>
+                    <input type="password" id="password-input-2" required>
+                </div>
+                <div class="btn-iniciarsesion-registarse">
+                    <button>Acceder</button>
+                </div>
+                <div class="separator">O bien inicia sesión con</div>
+                <div class="btn-redes">
+                    <button class="btn-google"><i class="fa-brands fa-google"></i>Google</button>
+                </div>
+            </div>
+            <a id="habilitar-scroll" href="#" class="modal-login__close">&times;</a>
+        </div>
+    </div>
     <!-- NAVBAR -->
     <nav class="padding-page">
-        <div class="logo">
+        <div class="nav-logo">
             <a href="index.html">
                 <img src="./img/logo.png" alt="Logo">
             </a>
         </div>
-        <div class="search">
-            <input type="search" id="search-input" placeholder="Busca tus marcas y productos favoritos...">
+        <div class="nav-search-box">
+            <input type="search" placeholder="Busca tus marcas y productos favoritos...">
         </div>
-        <div class="buttons">
+        <div class="nav-sesion-cesta">
             <!-- BOTON NO INICIADO -->
-            <a href="#login"><button id="deshabilitar-id" class="btn-login">Iniciar Sesión</button></a>
+            <!-- <a href="#login"><button id="deshabilitar-id" class="btn-login">Iniciar Sesión</button></a> -->
             <!-- BOTON YA INICIADO -->
-            <!-- <div class="dropdown">
+            <div class="dropdown">
                 <button class="dropdown_hover">Hola, Alejandro</button>
                 <div class="dropdown_menu">
                     <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
                 </div>
-            </div> -->
+            </div>
             <a href="cesta.html" class="cart btn-cesta"><i class="fas fa-shopping-cart"></i>
                 <span id="cart_menu_num">5</span>
             </a>
         </div>
     </nav>
     <!-- MENU -->
-    <div class="menu padding-page">
+    <div class="menu">
         <a href="">
             <p>Perros</p>
         </a>
@@ -85,38 +130,27 @@
         </div>
     </div>
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer__center">
-            <div class="footer__fila">
-                <img src="./img/logo-sin-fondo.png" alt="">
+    <footer>
+        <div class="footer padding-body">
+            <div class="row">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
             </div>
-            <div class="footer__fila">
-                <ul class="footer__ul">
-                    <li class="footer__li"><a href="https://help.netflix.com/es-es/node/412" class="footer__a">Preguntas frecuentes</a></li>
-                    <li class="footer__li"><a href="https://ir.netflix.net/ir-overview/profile/default.aspx" class="footer__a">Inversores</a></li>
-                    <li class="footer__li"><a href="https://devices.netflix.com/es/" class="footer__a">Formas de ver</a></li>
-                    <li class="footer__li"><a href="https://help.netflix.com/legal/corpinfo" class="footer__a">Información corporativa</a></li>
-                    <li class="footer__li"><a href="https://help.netflix.com/legal/notices" class="footer__a">Avisos legales</a></li>
+
+            <div class="row">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Career</a></li>
                 </ul>
-                <ul class="footer__ul">
-                    <li class="footer__li"><a href="https://help.netflix.com/es-es/" class="footer__a">Centro de ayuda</a></li>
-                    <li class="footer__li"><a href="https://jobs.netflix.com/" class="footer__a">Empleo</a></li>
-                    <li class="footer__li"><a href="https://help.netflix.com/legal/termsofuse" class="footer__a">Términos de uso</a></li>
-                    <li class="footer__li"><a href="https://help.netflix.com/es-es/contactus" class="footer__a">Contáctanos</a></li>
-                    <li class="footer__li"><a href="https://www.netflix.com/es/browse/genre/839338" class="footer__a">Solo en Netflix</a></li>
-                </ul>
-                <ul class="footer__ul">
-                    <li class="footer__li"><a href="{{url('/login')}}" class="footer__a">Cuenta</a></li>
-                    <li class="footer__li"><a href="https://www.netflix.com/es/redeem" class="footer__a">Canjear tarjetas regalo</a></li>
-                    <li class="footer__li"><a href="https://help.netflix.com/legal/privacy" class="footer__a">Privacidad</a></li>
-                    <li class="footer__li"><a href="https://fast.com/es/" class="footer__a">Prueba de velocidad</a></li>
-                </ul>
-                <ul class="footer__ul">
-                    <li class="footer__li"><a href="https://media.netflix.com/es/" class="footer__a">Zona de prensa</a></li>
-                    <li class="footer__li"><a href="https://www.netflix.com/gift-cards" class="footer__a">Comprar tarjetas regalo</a></li>
-                    <li class="footer__li"><a href="https://www.netflix.com/es/" class="footer__a">Preferencias de cookies</a></li>
-                    <li class="footer__li"><a href="https://help.netflix.com/es-es/node/125888" class="footer__a">Garantía legal</a></li>
-                </ul>
+            </div>
+
+            <div class="row">
+                Copyright © 2023 Pets&Co - All rights reserved
             </div>
         </div>
     </footer>

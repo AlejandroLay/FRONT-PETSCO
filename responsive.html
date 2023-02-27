@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Estilos generales */
+        
+        .div-grande,
+        .div-pequeno {
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            font-size: 24px;
+        }
+        /* Estilos para resoluciones mayores a 1215px */
+        
+        @media (min-width: 1215px) {
+            .div-grande {
+                display: block;
+            }
+            .div-pequeno {
+                display: none;
+            }
+        }
+        /* Estilos para resoluciones menores o iguales a 1215px */
+        
+        @media (max-width: 1215px) {
+            .div-grande {
+                display: none;
+            }
+            .div-pequeno {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div-grande">
+        Este div se ve en resoluciones mayores a 1215px.
+    </div>
+    <div class="div-pequeno">
+        Este div se ve en resoluciones menores o iguales a 1215px.
+    </div>
+
+</body>
+
+</html>
