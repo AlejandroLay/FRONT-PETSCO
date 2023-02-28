@@ -66,50 +66,120 @@
         </div>
     </div>
     <!-- NAVBAR -->
-    <nav class="padding-page">
-        <div class="nav-logo">
-            <a href="index.html">
-                <img src="./img/logo.png" alt="Logo">
+    <div class="nav-no-responsive">
+        <nav class="padding-page">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="./img/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="nav-search-box">
+                <input type="search" id="search-input" placeholder="Busca tus marcas y productos favoritos...">
+            </div>
+            <div class="nav-sesion-cesta">
+                <!-- BOTON NO INICIADO -->
+                <a href="#login"><button id="deshabilitar-id" class="btn-login">Iniciar Sesión</button></a>
+                <!-- BOTON YA INICIADO -->
+                <!-- <div class="dropdown">
+                    <button class="dropdown_hover">Hola, Alejandro</button>
+                    <div class="dropdown_menu">
+                        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+                    </div>
+                </div> -->
+                <a href="cesta.html" class="cart btn-cesta"><i class="fas fa-shopping-cart"></i>
+                    <span id="cart_menu_num">5</span>
+                </a>
+            </div>
+        </nav>
+        <!-- MENU -->
+        <div class="menu padding-page">
+            <a href="">
+                <p>Perros</p>
+            </a>
+            <a href="">
+                <p>Gatos</p>
+            </a>
+            <a href="">
+                <p>Conejos y roedores</p>
+            </a>
+            <a href="">
+                <p>Peces</p>
+            </a>
+            <a href="">
+                <p>Reptiles</p>
+            </a>
+            <a href="">
+                <p>Pajaros</p>
             </a>
         </div>
-        <div class="nav-search-box">
-            <input type="search" id="search-input" placeholder="Busca tus marcas y productos favoritos...">
-        </div>
-        <div class="nav-sesion-cesta">
-            <!-- BOTON NO INICIADO -->
-            <a href="#login"><button id="deshabilitar-id" class="btn-login">Iniciar Sesión</button></a>
-            <!-- BOTON YA INICIADO -->
-            <!-- <div class="dropdown">
-                <button class="dropdown_hover">Hola, Alejandro</button>
-                <div class="dropdown_menu">
-                    <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+    </div>
+    <!-- MODAL MENU BURGER -->
+    <div id="burger-modal" class="burger">
+        <div class="burger__content">
+            <div class="menu-burger">
+                <div class="two-column-menu-burger-responsive">
+                    <div class="menu-burger-categoria">
+                        <a href="">
+                            <p>Perros</p>
+                        </a>
+                    </div>
+                    <div class="menu-burger-flecha">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
                 </div>
-            </div> -->
-            <a href="cesta.html" class="cart btn-cesta"><i class="fas fa-shopping-cart"></i>
-                <span id="cart_menu_num">5</span>
-            </a>
+                <hr>
+                <div class="two-column-menu-burger-responsive">
+                    <div class="menu-burger-categoria">
+                        <a href="">
+                            <p>Perros</p>
+                        </a>
+                    </div>
+                    <div class="menu-burger-flecha">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="two-column-menu-burger-responsive">
+                    <div class="menu-burger-categoria">
+                        <a href="">
+                            <p>Perros</p>
+                        </a>
+                    </div>
+                    <div class="menu-burger-flecha">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="two-column-menu-burger-responsive">
+                    <div class="menu-burger-categoria">
+                        <a href="">
+                            <p>Perros</p>
+                        </a>
+                    </div>
+                    <div class="menu-burger-flecha">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="button-login-sigin-y-cesta-burger">
+                <a href="#login"><button>Inciar Sesion</button></a>
+                <a href="cesta.html" class="cart btn-cesta"><i class="fas fa-shopping-cart"></i>
+                    <span id="cart_menu_num">5</span>
+                </a>
+            </div>
+            <a id="habilitar-scroll-burger" href="#" class="burger__close">&times;</a>
         </div>
-    </nav>
-    <!-- MENU -->
-    <div class="menu padding-page">
-        <a href="">
-            <p>Usuarios</p>
-        </a>
-        <a href="">
-            <p>Productos</p>
-        </a>
-        <a href="">
-            <p>Usuarios</p>
-        </a>
-        <a href="">
-            <p>Productos</p>
-        </a>
-        <a href="">
-            <p>Usuarios</p>
-        </a>
-        <a href="">
-            <p>Productos</p>
-        </a>
+    </div>
+    <!-- NAVBAR RESPONSIVE -->
+    <div class="nav-responsive padding-page">
+        <div class="nav-logo-and-burger">
+            <a href="index.html"><img src="img/logo.png" width="215px" alt=""></a>
+            <a href="#burger-modal"><button id="bloquear-scroll-burger" class="btn-burger"><i href="#burger-modal" class="fa-solid fa-bars"></i></button></a>
+        </div>
+        <div class="nav-responsive-search-box">
+            <input type="search" placeholder="Busca tus marcas y productos favoritos...">
+        </div>
     </div>
     <!-- IMAGEN INDEX -->
     <div class="imagen-principal padding-page search-div">
@@ -117,7 +187,7 @@
     </div>
     <!-- PRODUCTOS -->
     <div class="four-columns padding-page">
-        <div class="card search-div">
+        <div class="card to-hide">
             <div class="card-image">
                 <a href="./vista-producto.html"><img src="./img/comida/comida1.jpg" alt=""></a>
             </div>
@@ -136,7 +206,7 @@
                 <a href=""><button>Añadir a la cesta</button></a>
             </div>
         </div>
-        <div class="card search-div">
+        <div class="card to-hide">
             <div class="card-image">
                 <a href="./vista-producto.html"><img src="./img/comida/comida2.jpg" alt=""></a>
             </div>
@@ -155,7 +225,7 @@
                 <a href=""><button>Añadir a la cesta</button></a>
             </div>
         </div>
-        <div class="card search-div">
+        <div class="card to-hide">
             <div class="card-image">
                 <a href="./vista-producto.html"><img src="./img/comida/comida3.jpg" alt=""></a>
             </div>
@@ -174,7 +244,7 @@
                 <a href=""><button>Añadir a la cesta</button></a>
             </div>
         </div>
-        <div class="card search-div">
+        <div class="card to-hide">
             <div class="card-image">
                 <a href="./vista-producto.html"><img src="./img/comida/comida4.jpg" alt=""></a>
             </div>
@@ -193,7 +263,7 @@
                 <a href=""><button>Añadir a la cesta</button></a>
             </div>
         </div>
-        <div class="card search-div">
+        <div class="card to-hide">
             <div class="card-image">
                 <a href="./vista-producto.html"><img src="./img/comida/comida5.jpg" alt=""></a>
             </div>
@@ -214,11 +284,11 @@
         </div>
     </div>
     <!-- TWO COLUM PARA SLOGAN -->
-    <div class="slogan padding-page search-div">
+    <div class="slogan padding-page to-hide">
         <h1>Tenemos lo que tus animales aman</h1>
         <p>En Pets&Co podras encontrar entre miles de marcas lo que tu animal le encanta, registrate y compra ya!</p>
     </div>
-    <div class="two-column-slogan padding-page search-div">
+    <div class="two-column-slogan padding-page to-hide">
         <div class="two-column-slogan-image">
             <img src="./img/principal2.jpg" alt="Imagen 1">
         </div>
@@ -227,7 +297,7 @@
         </div>
     </div>
     <!-- GOOGLE MAPS -->
-    <div class="slogan padding-page search-div">
+    <div class="slogan padding-page to-hide">
         <h1>Encuentra tu tienda Pets&Co mas cercana</h1>
         <br>
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11969.524328133542!2d2.1449628!3d41.4092456!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49911ff684ceb%3A0x502cb8091f3b078f!2sPets%20%26%20Co!5e0!3m2!1ses!2ses!4v1677522133046!5m2!1ses!2ses"
@@ -259,6 +329,7 @@
         </div>
     </footer>
     <script src="./js/scroll.js"></script>
+    <script src="./js/scroll-burger.js"></script>
     <script src="./js/login.js"></script>
     <script src="./js/search.js"></script>
 </body>

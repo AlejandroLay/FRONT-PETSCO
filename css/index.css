@@ -12,6 +12,10 @@ body {
     overflow: hidden;
 }
 
+.bloquear-scroll2 {
+    overflow: hidden;
+}
+
 :root {
     --color-1: #7A4C00;
     --color-2: #F9B64B;
@@ -348,6 +352,130 @@ nav {
     background-color: white;
     color: black;
     font-size: 14px;
+}
+
+
+/* ################################### NAVBAR RESPONSIVE ################################### */
+
+.nav-responsive {
+    margin-top: 15px;
+}
+
+.nav-logo-and-burger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo-and-burger i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-responsive-search-box {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.nav-responsive-search-box input {
+    width: 100%;
+    font-size: 17px;
+    padding: 15px 15px 15px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(235, 235, 235);
+}
+
+.nav-responsive-search-box input:focus {
+    outline: none;
+}
+
+
+/* ################################### BURGER MENU MODAL ################################### */
+
+#burger-modal {
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 1);
+    transition: all .4s;
+}
+
+#burger-modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.burger__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    padding: 5em 1em;
+}
+
+.btn-burger {
+    background-color: white;
+    border: 1px solid white;
+}
+
+.burger__close {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 50px;
+    color: black;
+    text-decoration: none;
+}
+
+
+/* CONTENIDO DENTRO MODAL */
+
+.menu-burger a {
+    text-decoration: none;
+    color: black;
+}
+
+.two-column-menu-burger-responsive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-burger-categoria {
+    width: 90%;
+}
+
+.menu-burger-flecha {
+    width: 10%;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.menu-burger-flecha i {
+    font-size: 20px;
+}
+
+.button-login-sigin-y-cesta-burger {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.button-login-sigin-y-cesta-burger button {
+    padding: 5px 20px;
+    background-color: var(--color-1);
+    border: 1px solid var(--color-1);
+    width: 40%;
+    font-size: 16px;
+    color: white;
 }
 
 
@@ -718,6 +846,7 @@ nav {
 
 .two-column-vista-productos {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 10px;
 }
 
@@ -763,7 +892,7 @@ nav {
 
 .boton-añadir-a-la-cesta-productos {
     width: 100%;
-    height: 9%;
+    height: 46px;
     font-size: 16px;
     background-color: var(--color-1);
     border: 1px solid black;
@@ -873,33 +1002,6 @@ nav {
 /* FOUR-COLUMN DESIGN */
 
 @media only screen and (max-width: 1000px) {
-    .padding-page {
-        margin: 10px;
-    }
-    .box-cesta-contenido-imagen-producto {
-        width: 50%;
-    }
-    .box-cesta-contenido-informacion-producto {
-        width: 50%;
-    }
-    .box-cesta-contenido-descripcion-producto {
-        width: 100%;
-    }
-    .box-cesta-contenido-precio {
-        width: 50%;
-    }
-    .box-cesta-contenido-eliminar {
-        width: 50%;
-    }
-    .right-column-cesta {
-        width: 100%;
-    }
-    .left-column-cesta {
-        width: 100%;
-    }
-    .box-total-pedido {
-        margin-left: 0px;
-    }
     .card {
         width: 25%;
     }
@@ -931,12 +1033,55 @@ nav {
     .footer .row a i {
         margin: 0% 3%;
     }
+    /* CESTA */
+    .box-cesta-contenido-imagen-producto {
+        width: 50%;
+    }
+    .box-cesta-contenido-informacion-producto {
+        width: 50%;
+    }
+    .box-cesta-contenido-descripcion-producto {
+        width: 100%;
+    }
+    .box-cesta-contenido-precio {
+        width: 50%;
+    }
+    .box-cesta-contenido-eliminar {
+        width: 50%;
+    }
+    .right-column-cesta {
+        width: 100%;
+    }
+    .left-column-cesta {
+        width: 100%;
+    }
+    .box-total-pedido {
+        margin-left: 0px;
+    }
+    .box-total-pedido {
+        margin-top: 5px;
+    }
+    .box-cesta-contenido-descripcion-producto {
+        margin: 0px 10px;
+    }
+    /* VISTA PRODUCTO */
+    .box-imagen-producto {
+        width: 100%;
+    }
+    .box-descripcion-productos {
+        width: 100%;
+        padding-left: 0px;
+        padding-bottom: 20px;
+    }
 }
 
 
 /* TWO-COLUMN DESIGN */
 
 @media only screen and (max-width: 600px) {
+    .imagen-principal {
+        display: none;
+    }
     .card {
         width: 50%;
     }
@@ -949,16 +1094,46 @@ nav {
     .two-column-slogan-image {
         width: 100%;
     }
+    .image-404 {
+        margin-top: 30px;
+    }
 }
 
 
 /* ONE-COLUMN DESIGN */
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 325px) {
     .card {
         width: 100%;
     }
     .card-boton button {
         width: 100%;
+    }
+}
+
+
+/* DESACTIVA EL MODO RESPONSIVE */
+
+@media (min-width: 1215px) {
+    .nav-no-responsive {
+        display: block;
+    }
+    .nav-responsive {
+        display: none;
+    }
+}
+
+
+/* ACTIVA MODO RESPONSIVE */
+
+@media (max-width: 1215px) {
+    .padding-page {
+        margin: 10px;
+    }
+    .nav-no-responsive {
+        display: none;
+    }
+    .nav-responsive {
+        display: block;
     }
 }
