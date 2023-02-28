@@ -5,34 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pets&Co</title>
+    <script src="https://kit.fontawesome.com/2b5286e1aa.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#7a4c00">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
     <style>
         /* Estilos generales */
-        
-        .div-grande,
-        .div-pequeno {
-            width: 100%;
-            height: 200px;
-            text-align: center;
-            font-size: 24px;
-        }
         /* Estilos para resoluciones mayores a 1215px */
         
+        .nav-logo-and-burger {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo-and-burger i {
+            font-size: 30px;
+            cursor: pointer;
+        }
+        
         @media (min-width: 1215px) {
-            .div-grande {
+            .nav-no-responsive {
                 display: block;
             }
-            .div-pequeno {
+            .nav-responsive {
                 display: none;
             }
         }
         /* Estilos para resoluciones menores o iguales a 1215px */
         
         @media (max-width: 1215px) {
-            .div-grande {
+            .nav-no-responsive {
                 display: none;
             }
-            .div-pequeno {
+            .nav-responsive {
                 display: block;
             }
         }
@@ -40,11 +53,17 @@
 </head>
 
 <body>
-    <div class="div-grande">
-        Este div se ve en resoluciones mayores a 1215px.
+    <div class="nav-no-responsive">
+        <h1>Hola</h1>
     </div>
-    <div class="div-pequeno">
-        Este div se ve en resoluciones menores o iguales a 1215px.
+    <div class="nav-responsive">
+        <div class="nav-logo-and-burger">
+            <img src="img/logo.png" width="215px" alt="">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav-responsive-search-box">
+            <input type="search">
+        </div>
     </div>
 
 </body>
