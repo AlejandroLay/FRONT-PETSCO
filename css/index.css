@@ -370,6 +370,8 @@ nav {
 .nav-logo-and-burger i {
     font-size: 30px;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 .nav-responsive-search-box {
