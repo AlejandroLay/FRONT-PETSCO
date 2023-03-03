@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="input-listar-productos-bbdd">
+    <div class="div-listar-productos-bbdd">Este es el div que aparecerá cuando escribas algo en el input.</div>
+    <script>
+        const inputs = document.querySelectorAll('.input-listar-productos-bbdd');
+        const divs = document.querySelectorAll('.div-listar-productos-bbdd');
+
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('input', function() {
+                if (inputs[i].value.trim() === '') {
+                    divs[i].style.display = 'none';
+                } else {
+                    divs[i].style.display = 'block';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
